@@ -2,10 +2,9 @@
 
 import cv2
 
- faceCascade=cv2.CascadeClassifier(("harrcade_frontalface_default_.xml")
- cap=cv2.VideoCapture(0)
-
- while True:
+faceCascade=cv2.CascadeClassifier(("harrcade_frontalface_default_.xml")
+cap=cv2.VideoCapture(0)
+while True:
      check,img=cap.read()
      gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
      faces=faceCascade.detectmultiscale(img,1.1,4)
@@ -15,3 +14,7 @@ import cv2
          k=cv2.waitKey(30) &  0xFF
          if k =27:
             break
+                
+cv2.destroyAllWindows()                                  
+                                   
+                                   
